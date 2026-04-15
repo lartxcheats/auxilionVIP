@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FFD700">
+    <meta name="description" content="LartxCheats VIP — Dashboard">
+    <title>LartxCheats VIP</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- iOS PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="LartxVIP">
+    <link rel="apple-touch-icon" href="discord.png">
+
+    <!-- Android / Chrome -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="LartxVIP">
+
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div id="fovOverlay" class="fov-overlay">
+        <div id="fovCircle" class="fov-circle"></div>
+    </div>
+
+    <div class="container" style="padding-top: 16px;">
+
+        <header style="flex-direction: row; padding: 16px 20px; gap: 12px; text-align: left;">
+            <div class="avatar-wrap">
+                <img src="guu.jpeg" alt="Avatar VIP" class="avatar-sm">
+                <span class="avatar-status" style="width:10px;height:10px;bottom:1px;right:1px;"></span>
+            </div>
+            <div style="flex:1;">
+                <span class="vip-badge" style="font-size:10px; padding: 3px 10px;">👑 VIP PREMIUM</span>
+                <h1 class="titulo-gamer" style="font-size:15px; margin-top:4px;">
+                    AUXILIO <span class="name-highlight">LartxCheats</span>
+                </h1>
+            </div>
+            <button id="logoutBtn" class="btn-logout">Sair</button>
+        </header>
+
+        <div class="card">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="aimbot">⚡ Aimbot</button>
+                <button class="tab-btn" data-tab="config">⚙️ Config</button>
+                <button class="tab-btn" data-tab="info">👤 Info</button>
+            </div>
+
+            <!-- Aimbot Tab -->
+            <div id="aimbot-tab" class="tab-content active">
+
+                <p class="section-label">Funções</p>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="ativarAuxilio">
+                        <span>Ativar Auxílio</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="ativarFov">
+                        <span>Ativar FOV</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="ativarAntiRecuo">
+                        <span>🌟 Anti-Recuo <span style="opacity:.5;font-size:12px;">(VIP)</span></span>
+                    </label>
+                </div>
+
+                <div class="divider"></div>
+
+                <p class="section-label">Ajustes</p>
+
+                <div class="slider-container">
+                    <div class="slider-label">
+                        <span>FOV</span>
+                        <span id="fovValue" class="slider-value">5</span>
+                    </div>
+                    <input type="range" id="fovSlider" min="1" max="10" value="5" class="range-slider">
+                </div>
+
+                <div class="slider-container">
+                    <div class="slider-label">
+                        <span>🌟 Sensibilidade <span style="opacity:.5;font-size:12px;">(VIP)</span></span>
+                        <span id="sensValue" class="slider-value">50</span>
+                    </div>
+                    <input type="range" id="sensSlider" min="1" max="100" value="50" class="range-slider">
+                </div>
+
+                <div class="dropdown-container">
+                    <label class="dropdown-label">Alvo do Auxílio</label>
+                    <select id="auxilioSelect" class="custom-select">
+                        <option value="head">Auxílio Head</option>
+                        <option value="body">Auxílio Body</option>
+                        <option value="legs">Auxílio Legs</option>
+                        <option value="chest">🌟 Auxílio Chest (VIP)</option>
+                    </select>
+                </div>
+
+                <div class="radio-container">
+                    <span class="radio-title">Tipo de Aimbot</span>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="tipoAimbot" value="atirar" checked>
+                            <span>Ao Atirar</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="tipoAimbot" value="olhar">
+                            <span>Ao Olhar</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="tipoAimbot" value="auto">
+                            <span>🌟 Auto</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button id="injetarBtn" class="btn-injetar">💎 INJETAR FUNÇÕES VIP</button>
+
+                <div class="termos">
+                    <a href="#" id="termosDashboard">⚠️ Versão VIP Premium. Não nos responsabilizamos por mal uso.</a>
+                </div>
+            </div>
+
+            <!-- Config Tab -->
+            <div id="config-tab" class="tab-content">
+                <div class="config-content">
+                    <h2>⚙️ Configurações</h2>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="modoSilencioso">
+                            <span>🌟 Modo Silencioso</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="autoUpdate">
+                            <span>🌟 Auto-Update</span>
+                        </label>
+                    </div>
+                    <button class="btn-secondary">💾 Salvar Perfil</button>
+                    <button class="btn-secondary">📥 Carregar Perfil</button>
+                </div>
+            </div>
+
+            <!-- Info Tab -->
+            <div id="info-tab" class="tab-content">
+                <div class="info-content">
+                    <h2>👑 Informações VIP</h2>
+                    <div class="info-row">
+                        <span class="label">Usuário</span>
+                        <span class="value" id="usuarioLogado">—</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Versão</span>
+                        <span class="value">VIP v1.0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Status</span>
+                        <span class="value active">PREMIUM ATIVO</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Recursos Exclusivos</span>
+                        <span class="value">6</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

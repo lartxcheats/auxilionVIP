@@ -1,0 +1,39 @@
+{
+  "name": "LartxCheats VIP",
+  "short_name": "LartxVIP",
+  "description": "Painel VIP LartxCheats — Auxílio Free Fire",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080808",
+  "theme_color": "#FFD700",
+  "lang": "pt-BR",
+  "categories": ["games", "utilities"],
+  "icons": [
+    {
+      "src": "discord.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "discord.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "discord.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "discord.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

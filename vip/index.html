@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FFD700">
+    <meta name="description" content="LartxCheats VIP — Painel de Acesso">
+    <title>LartxCheats VIP</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- iOS PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="LartxVIP">
+    <link rel="apple-touch-icon" href="discord.png">
+
+    <!-- Android / Chrome -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="LartxVIP">
+
+    <!-- Prevent phone number detection -->
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="container" style="padding-top: 48px;">
+
+        <header>
+            <div class="avatar-wrap">
+                <img src="guu.jpeg" alt="Avatar VIP" class="avatar">
+                <span class="avatar-status"></span>
+            </div>
+            <span class="vip-badge">👑 VIP PREMIUM</span>
+            <h1 class="titulo-gamer">
+                AUXILIO <span class="name-highlight">LartxCheats</span>
+            </h1>
+            <button id="installBtn" class="install-btn" style="display:none;">⬇ Instalar App</button>
+        </header>
+
+        <div class="card">
+            <div class="login-title">
+                <h2>Bem-vindo de volta</h2>
+                <p>Acesse sua conta VIP para continuar</p>
+            </div>
+
+            <div class="form-group">
+                <label for="userInput">Usuário</label>
+                <div class="input-wrap">
+                    <span class="input-icon">👤</span>
+                    <input type="text" id="userInput" placeholder="Digite seu usuário VIP" autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="keyInput">Key VIP</label>
+                <div class="input-wrap">
+                    <span class="input-icon">🔑</span>
+                    <input type="password" id="keyInput" placeholder="Cole sua key VIP aqui" autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+
+            <div id="errorMessage" class="error-message" style="display:none;"></div>
+
+            <button id="saveBtn" class="btn-primary">Entrar no Painel</button>
+
+            <div class="termos">
+                <a href="#" id="termosLink">⚠️ Versão VIP Premium. Não nos responsabilizamos por mal uso.</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
